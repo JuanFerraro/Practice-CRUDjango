@@ -24,5 +24,15 @@
 
     </form>
 
+    {% for task in tasks %}
+        <div>
+            <h4>{{ task.title }}</h4>
+            <p>{{ task.description }}</p>
+            <button>Delete</button>
+        </div>
+    {% empty %}
+        <h1>No tasks yet</h1>
+    {% endfor %}
+
 </body>
 </html>
